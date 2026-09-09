@@ -269,7 +269,9 @@ function saveCache(bootstrap, fixtures){
     localStorage.setItem("fpl_cache", JSON.stringify({
       bootstrap, fixtures, when: new Date().toISOString()
     }));
-  }catch(e){}
+  }catch(e){
+    console.error("GW", gw, e);
+  }
 }
 
 function loadCache(){
